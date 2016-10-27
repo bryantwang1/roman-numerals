@@ -31,7 +31,6 @@ function romanConverter(number) {
     stacks = parseInt(stacks);
     var stackIndex = arabics.findIndex(whichArabic);
     for(var idx = 0; idx < stacks && idx < 3; idx++) {
-      console.log("stacked");
       newRoman += romans[stackIndex];
       if(stacks >= 5 && stacks <= 8) {
       break;
@@ -42,19 +41,14 @@ function romanConverter(number) {
   function numberParser(numberToParse) {
     var parseNumber = numberToParse.toString();
     if (numberToParse % arabics.find(whichArabic) != 0 && parseInt(parseNumber[0]) != 4 && parseInt(parseNumber[0]) != 9) {
-      console.log("Enters recursion");
       romanStacker(numberToParse);
       var remainder = numberToParse % arabics.find(whichArabic);
       numberParser(remainder);
     } else if(parseInt(parseNumber[0]) === 9 || parseInt(parseNumber[0]) === 4) {
-        console.log("Enters 4 or 9");
         number = numberToParse;
-        console.log("4/9 number: " + number);
         var parseIndex = arabics.reverse().findIndex(whichArabicReverse);
         var reverseRomans = romans.reverse();
-        console.log("parseIndex: " + parseIndex + ", reverseRomans: " + reverseRomans);
         newRoman += "I" + reverseRomans[parseIndex];
-        console.log("reverseRomans char: " + reverseRomans[parseIndex]);
         arabics.reverse();
         romans.reverse();
         numberToParse = parseNumber.replace(parseNumber[0], "");
@@ -63,7 +57,6 @@ function romanConverter(number) {
         }
         numberParser(parseInt(numberToParse));
     } else {
-      console.log("Enters else");
       romanStacker(numberToParse);
     }
   };
