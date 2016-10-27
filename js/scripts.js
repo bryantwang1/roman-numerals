@@ -23,17 +23,25 @@ function romanConverter(number) {
     return arabicNumber <= number;
   }
   function romanStacker(stacks) {
+    number = stacks;
+    var stackIndex = arabics.findIndex(whichArabic);
     for(var idx = 0; idx < stacks && idx < 3; idx++) {
       console.log("for loop");
-      newRoman += roman;
+      newRoman += romans[stackIndex];
     }
   }
   // End callback functions.
+
   //Check index scope if neccessary
   var index = arabics.findIndex(whichArabic);
-  roman = romans[index];
   newRoman = "";
-  romanStacker(number);
+  if (number % arabics.find(whichArabic) != 0) {
+    newRoman += romans[index];
+    var remainder = number % arabics.find(whichArabic);
+    romanStacker(remainder);
+  } else {
+    romanStacker(number);
+  }
   result = newRoman;
 };
 
