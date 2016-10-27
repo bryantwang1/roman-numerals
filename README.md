@@ -38,11 +38,11 @@ Output: XIII_
 Input: 22
 Output: XXII_
 * _The program separates ones, tens, hundreds, and thousands.
-Input: 99
-Output: XCIX_
+Input: 333
+Output: CCCXXXIII_
 * _The program switches to subtraction beyond 3 symbols.
-Input: 4
-Output: IV_
+Input: 44
+Output: ILIV_
 
 ## Setup/Installation Requirements
 
