@@ -33,7 +33,9 @@ function romanConverter(number) {
     for(var idx = 0; idx < stacks && idx < 3; idx++) {
       console.log("stacked");
       newRoman += romans[stackIndex];
-
+      if(stacks >= 5 && stacks <= 8) {
+      break;
+      }
     }
   };
   // This function is RECURSIVE.

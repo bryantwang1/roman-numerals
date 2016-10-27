@@ -43,6 +43,9 @@ Output: CCCXXXIII_
 * _The program switches to subtraction beyond 3 symbols.
 Input: 44
 Output: ILIV_
+* _The program prevents numbers above 5 and below 9 from adding more symbols equivalent to 5.
+Input: 5
+Output: V_
 
 ## Setup/Installation Requirements
 
