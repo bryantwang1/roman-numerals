@@ -28,7 +28,7 @@ function romanConverter(number) {
       newRoman += roman;
     }
   }
-    // End callback functions.
+  // End callback functions.
   //Check index scope if neccessary
   var index = arabics.findIndex(whichArabic);
   roman = romans[index];

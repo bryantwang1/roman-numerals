@@ -28,7 +28,13 @@ Output: C_
 * _The program adds symbols together to form numbers.
 Input: 3
 Output: III_
-* _The program switches to subtraction above 3 symbols.
+* _The program stops adding symbols together beyond 3.
+Input: 4
+Output: III_
+* _The program modulos input against the largest increment less than the input to check for remainder, then places one symbol for the increment, and adds symbols together for the remainder.
+Input: 13
+Output: XIII_
+* _The program switches to subtraction beyond 3 symbols.
 Input: 4
 Output: IV_
 * _The program separates ones, tens, hundreds, and thousands.
