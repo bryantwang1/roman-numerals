@@ -24,6 +24,8 @@ function romanConverter(number) {
   }
   function romanStacker(stacks) {
     number = stacks;
+    stacks = stacks.toString().charAt(0);
+    stacks = parseInt(stacks);
     var stackIndex = arabics.findIndex(whichArabic);
     for(var idx = 0; idx < stacks && idx < 3; idx++) {
       console.log("for loop");
@@ -36,7 +38,7 @@ function romanConverter(number) {
   var index = arabics.findIndex(whichArabic);
   newRoman = "";
   if (number % arabics.find(whichArabic) != 0) {
-    newRoman += romans[index];
+    romanStacker(number);
     var remainder = number % arabics.find(whichArabic);
     romanStacker(remainder);
   } else {

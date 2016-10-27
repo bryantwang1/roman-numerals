@@ -34,6 +34,9 @@ Output: III_
 * _The program modulos input against the largest increment less than the input to check for remainder, then places one symbol for the increment, and adds symbols together for the remainder.
 Input: 13
 Output: XIII_
+* _The program adds the appropriate number of symbols for the increment.
+Input: 22
+Output: XXII_
 * _The program switches to subtraction beyond 3 symbols.
 Input: 4
 Output: IV_
