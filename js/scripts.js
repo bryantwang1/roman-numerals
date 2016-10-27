@@ -1,10 +1,17 @@
 var result;
+// Strips user input of punctuation
+function stripper(number) {
+  number = number.replace(/\D*/g, "");
+  parseInt(number);
+  return number;
+}
 // Checks if user input falls within the allowable range.
-function numberChecker (number) {
-  if (number > 0 && number < 3999) {
+function numberChecker(number) {
+  console.log("number: " + number);
+  if (number > 0 && number <= 3999) {
     romanConverter(number);
   } else {
-    alert("Not a number!");
+    alert("Not a number or it's too high!");
   }
 };
 // Converts user input to
@@ -19,8 +26,8 @@ $(function() {
     event.preventDefault();
 
     result = 0;
-    var userInput = ($("input#number-input").val();
-    numberChecker(userInput);
+    var userInput = $("input#number-input").val();
+    numberChecker(stripper(userInput));
     $(".result").text(result);
   });
 });

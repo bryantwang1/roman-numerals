@@ -19,6 +19,9 @@ Output: Number is too low!_
 * _The program checks if the input is higher than 3,999.
 Input: 4,000
 Output: Number is too high!_
+* _The program removes punctuation.
+Input: 1,300
+Output: MCCC_
 * _The value of each symbol is as follows: I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1,000.
 Input: 100
 Output: C_
