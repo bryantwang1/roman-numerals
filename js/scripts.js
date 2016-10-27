@@ -37,13 +37,19 @@ function romanConverter(number) {
   //Check index scope if neccessary
   var index = arabics.findIndex(whichArabic);
   newRoman = "";
-  if (number % arabics.find(whichArabic) != 0) {
-    romanStacker(number);
-    var remainder = number % arabics.find(whichArabic);
-    romanStacker(remainder);
-  } else {
-    romanStacker(number);
-  }
+  // Recursive function
+  function numberParser(numberToParse) {
+    if (numberToParse % arabics.find(whichArabic) != 0) {
+      console.log("Enters recursion");
+      romanStacker(numberToParse);
+      var remainder = numberToParse % arabics.find(whichArabic);
+      numberParser(remainder);
+    } else {
+      romanStacker(numberToParse);
+    }
+  };
+  // End recursive function
+  numberParser(number);
   result = newRoman;
 };
 
