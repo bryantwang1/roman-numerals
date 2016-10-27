@@ -37,12 +37,12 @@ Output: XIII_
 * _The program adds the appropriate number of symbols for the increment.
 Input: 22
 Output: XXII_
-* _The program switches to subtraction beyond 3 symbols.
-Input: 4
-Output: IV_
 * _The program separates ones, tens, hundreds, and thousands.
 Input: 99
 Output: XCIX_
+* _The program switches to subtraction beyond 3 symbols.
+Input: 4
+Output: IV_
 
 ## Setup/Installation Requirements
 
