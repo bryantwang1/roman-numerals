@@ -1,6 +1,8 @@
 var result;
 var romans = ["M", "D", "C", "L", "X", "V", "I"];
 var arabics = [1000, 500, 100, 50, 10, 5, 1];
+var roman;
+var newRoman;
 // Strips user input of punctuation
 function stripper(number) {
   number = number.replace(/\D*/g, "");
@@ -16,18 +18,22 @@ function numberChecker(number) {
 };
 // Converts user input to roman numerals.
 function romanConverter(number) {
-  // A callback function for findIndex to find which objects inside the array equal number.
+  // Callback functions.
   function whichArabic(arabicNumber) {
     return arabicNumber <= number;
   }
-  // End callback function.
-  var index = arabics.findIndex(whichArabic);
-  var roman = romans[index];
-  var newRoman = "";
-  for(i=0; i<number; i++) {
-    console.log("for loop");
-    newRoman += roman;
+  function romanStacker(stacks) {
+    for(var idx = 0; idx < stacks && idx < 3; idx++) {
+      console.log("for loop");
+      newRoman += roman;
+    }
   }
+    // End callback functions.
+  //Check index scope if neccessary
+  var index = arabics.findIndex(whichArabic);
+  roman = romans[index];
+  newRoman = "";
+  romanStacker(number);
   result = newRoman;
 };
 
